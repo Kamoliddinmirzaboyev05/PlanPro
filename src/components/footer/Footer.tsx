@@ -1,10 +1,5 @@
-import React, { useState } from "react";
 import "./Footer.css";
-type footerProps = {
-  todoText: string;
-  setTodoText: React.Dispatch<React.SetStateAction<string>>;
-  addTodo: (todoText: string) => void;
-};
+
 function Footer() {
   return (
     <footer>

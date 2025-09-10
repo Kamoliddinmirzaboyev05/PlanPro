@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaMoon } from "react-icons/fa";
@@ -9,7 +8,7 @@ function Navbar() {
       <div className="container flex justify-between items-center py-12 text-white">
         <div className="logo flex items-center justify-center gap-4">
           <div className="logoImg w-12 bg-white rounded-sm mr-2">
-            <img className="w-full" src="./planpro.svg" alt="logo" />
+            <img className="w-full" src="./planpro.png" alt="logo" />
           </div>
           <h1>PlanPro</h1>
         </div>

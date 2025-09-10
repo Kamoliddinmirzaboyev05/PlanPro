@@ -50,6 +50,9 @@ nav .navBtns button:hover {
 .hamburger {
   display: none;
 }
+nav{
+  padding: 20px 0;
+}
 @media (max-width: 768px) {
   nav {
     padding-left: 20px;

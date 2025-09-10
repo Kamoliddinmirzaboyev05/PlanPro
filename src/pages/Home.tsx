@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Checkbox } from "@/components/ui/checkbox";
 import { FaPen, FaTrashAlt } from "react-icons/fa";
@@ -6,6 +5,7 @@ import type { ITodo } from "@/types/types";
 import { toast } from "sonner";
 import { FaXmark } from "react-icons/fa6";
 import { CiPaperplane } from "react-icons/ci";
+import { useEffect, useState } from "react";
 function Home() {
   const [todoText, setTodoText] = useState<string>("");
   const [todos, setTodos] = useState<ITodo[] | null>(
