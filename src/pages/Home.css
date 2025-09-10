@@ -1,9 +1,16 @@
 main {
+  height: 100vh;
   padding-top: 80px;
+  background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
+  background-size: 350%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .mainTitle {
   text-align: center;
   margin-bottom: 30px;
+  padding-top: 20px;
   font-size: 24px;
 }
 .todos {
@@ -12,11 +19,11 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  border: 0.5px solid #172030;
-  border-radius: 15px;
+  border: 0.5px solid #17203045;
+  border-radius: 5px;
   padding: 15px;
   margin-bottom: 30px;
-  max-height: 500px;
+  max-height: 550px;
   overflow-y: scroll;
 }
 .todos .todo {
@@ -57,8 +64,9 @@ main {
 .addTodo form {
   position: fixed;
   bottom: 0;
+  left: auto;
   width: 100%;
-  background-color: #172030;
+  backdrop-filter: blur(15px);
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -67,32 +75,59 @@ main {
 }
 .addTodo form input {
   width: 100%;
+  max-width: 1200px;
   outline: none;
-  border-radius: 15px;
-  border: 1px solid rgb(0, 0, 81);
+  border-radius: 5px;
   padding: 15px;
   font-size: 18px;
+  border: #17203045 0.5px solid;
   color: #172030;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(252, 252, 252) / 30;
 }
 .addTodo form button {
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  border: 1px solid rgb(0, 0, 81);
+  /* width: 50px;
+  height: 50px; */
+  overflow: hidden;
+  border-radius: 5px;
+  border: 0.5px solid #17203045;
   padding: 15px;
-  font-size: 18px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #172030;
-  background-color: rgb(252, 252, 252);
-  transition: all 0.3s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 
+.addTodo form button:hover {
+  background-color: rgba(0, 128, 0, 0.084);
+}
+.animate{
+  animation: send 1s linear;
+}
 @media only screen and (max-width: 768px) {
-  main{
+  main {
     padding-top: 50px;
   }
-  .todos{
-    padding:0px 20px;
+  .todos {
+    padding: 0px 20px;
     border-radius: 5px;
+  }
+}
+@keyframes send {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

@@ -50,13 +50,22 @@ function Home() {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+
+  const setAnimate = ()=>{
+    const btn = document.querySelector(".sendBtn") as HTMLButtonElement;
+    btn.classList.add("animate");
+    setTimeout(() => {
+      btn.classList.remove("animate");
+    }, 1000);
+  }
   return (
     <main>
       <section>
         <div className="container">
           <h1 className="mainTitle">Todos</h1>
           <div className="todos">
-            {todos &&
+            {todos && todos.length > 0 ? (
+              todos &&
               todos?.map((todo) => {
                 return (
                   <div key={todo.id} className="todo">
@@ -110,7 +119,12 @@ function Home() {
                     </button>
                   </div>
                 );
-              })}
+              })
+            ) : (
+              <div className="noTodos">
+                <h1 className="noTodosTitle">No todos yet</h1>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -120,8 +134,10 @@ function Home() {
             e.preventDefault();
             if (editingId) {
               editTodo(editingId);
+              setAnimate();
             } else if (todoText.trim() !== "" && editingId === null) {
               setTodoText("");
+              setAnimate();
               addTodo(todoText.trim(), todos!);
             } else {
               toast.error("Please enter a todo");
@@ -137,8 +153,8 @@ function Home() {
             type="text"
             placeholder="Type to do"
           />
-          <button>
-            <CiPaperplane />
+          <button >
+            <CiPaperplane size={45} className="sendBtn" />
           </button>
         </form>
       </section>
