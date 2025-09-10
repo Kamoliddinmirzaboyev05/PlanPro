@@ -2,7 +2,7 @@ main {
   height: 100vh;
   padding-top: 80px;
   background-image: url("https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg");
-  background-size: 350%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -113,7 +113,18 @@ main {
     padding: 0px 20px;
     border-radius: 5px;
   }
+  main {
+  height: 100vh;
+  padding-top: 80px;
+  background-image: url("/public/bg.jpg");
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+}
+
+
 @keyframes send {
   0% {
     transform: translateX(0px);

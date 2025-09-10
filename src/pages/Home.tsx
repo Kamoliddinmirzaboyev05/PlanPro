@@ -154,7 +154,7 @@ function Home() {
             placeholder="Type to do"
           />
           <button >
-            <CiPaperplane size={45} className="sendBtn" />
+            <CiPaperplane size={28} className="sendBtn" />
           </button>
         </form>
       </section>
