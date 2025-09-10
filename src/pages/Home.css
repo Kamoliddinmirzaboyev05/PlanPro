@@ -1,0 +1,98 @@
+main {
+  padding-top: 120px;
+}
+.mainTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.todos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 0.5px solid #172030;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 30px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.todos .todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #172030;
+}
+.todos .todo .todoInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: transparent;
+  font-size: 18px;
+}
+.deleteBtn {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: transparent;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.deleteBtn:hover {
+  color: red;
+}
+.editBtn:hover {
+  color: green;
+}
+.addTodo {
+  position: relative;
+}
+.addTodo form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #172030;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.addTodo form input {
+  width: 100%;
+  outline: none;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 81);
+  padding: 15px;
+  font-size: 18px;
+  color: #172030;
+  background-color: rgb(252, 252, 252);
+}
+.addTodo form button {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 81);
+  padding: 15px;
+  font-size: 18px;
+  color: #172030;
+  background-color: rgb(252, 252, 252);
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  main{
+    padding-top: 50px;
+  }
+  .todos{
+    padding:0px 20px;
+    border-radius: 5px;
+  }
+}
